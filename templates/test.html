@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for key, value in content.items() %}
+        <h1>{{ key }}</h1>
+        <p>{{ value|safe }}</p>
+        {% if not loop.last %}
+            <hr>
+        {% endif %}
+    {% else %}
+        <h2>Последовательность пуста!</h2>
+    {% endfor %}
+</body>
+</html>
